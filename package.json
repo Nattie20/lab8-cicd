@@ -1,13 +1,13 @@
 {
-  "name": "lab8-app",
+  "name": "lab6-app",
   "version": "1.0.0",
-  "description": "Lab 8 CI/CD Application",
+  "description": "CISC 886 Lab 6 – Containerization demo app",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
     "express": "^4.18.2",
-    "mongodb": "^6.0.0"
+    "mongodb": "^6.0.0" 
   }
 }
