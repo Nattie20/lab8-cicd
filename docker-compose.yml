@@ -1,20 +1,18 @@
 services:
   db:
-    [cite_start]image: mongo:latest [cite: 20]
+    image: mongo:latest
     volumes:
-      - [cite_start]mongo-data:/data/db [cite: 22]
-      - [cite_start]./init-db.js:/docker-entrypoint-initdb.d/init-db.js:ro [cite: 21]
- 
+      - mongo-data:/data/db
+      - ./init-db.js:/docker-entrypoint-initdb.d/init-db.js:ro
 
   app:
-    [cite_start]build: . [cite: 17]
+    build: .
     ports:
-      - [cite_start]"3000:3000" [cite: 18]
+      - "3000:3000"
     environment:
-      - [cite_start]MONGO_URL=mongodb://db:27017/taskdb [cite: 19]
+      - MONGO_URL=mongodb://db:27017/taskdb
     depends_on:
       - db
-    restart: always
 
 volumes:
-  [cite_start]mongo-data: [cite: 22]
+  mongo-data:
