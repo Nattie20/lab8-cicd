@@ -1,9 +1,7 @@
-db = db.getSiblingDB('todoDB');
-db.tasks.drop(); 
+db = db.getSiblingDB('taskdb');
+db.tasks.drop();
 db.tasks.insertMany([
-  { id: 1, name: 'Milk',          status: 'done'    },
-  { id: 2, name: 'Eggs',          status: 'done'    },
-  { id: 3, name: 'Bread',         status: 'pending' },
-  { id: 4, name: 'Butter',        status: 'pending' },
-  { id: 5, name: 'Orange juice',  status: 'pending' }
+  { id: 1, name: 'Setup Lab 8', status: 'completed' },
+  { id: 2, name: 'Configure MongoDB', status: 'pending' },
+  { id: 3, name: 'Run CI/CD Pipeline', status: 'pending' }
 ]);
